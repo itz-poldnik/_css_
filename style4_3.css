@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("img/main_bg.png");
+    background-origin: cover;
+    background-attachment: fixed;
+    background-color: gray;
+}
+div {
+    width: 100em;
+    height: 20em;
+    margin: 3em auto;
+    border: 3px solid rgb(150, 150, 150);
+}
+body > div:first-child {
+    background: url("img/bg1.png") repeat-x rgba(255, 0, 0, .2);
+    background-size: 10em;
+}
+body > div:nth-child(2) {
+    position: relative;
+    background-color: rgba(255, 255, 0, .5);
+}
+body > div:nth-child(2)::before {
+    content: 'Это псевдоэлемент слева';
+    position: absolute;
+    width: 8em;
+    height: inherit;
+    background-color: rgba(0, 255, 255, 1);
+}
+body >div:nth-child(2)::after {
+    content: 'Это псевдоэлемент справа';
+    position: absolute;
+    width: 8em;
+    height: inherit;
+    background-color: rgba(255, 0, 255, 1);
+    right: 0;
+}
+body > div:nth-child(3) {
+    background: linear-gradient(to top, #fff, #00f);
+}
+body > div:last-child {
+    background: radial-gradient(ellipse farthest-corner at 50px 80px, #fff, #5000ff);
+}

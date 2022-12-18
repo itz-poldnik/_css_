@@ -1,0 +1,105 @@
+/* Обнуляем все отступы*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Назначаем шрифты, ширину, отображение на середине и фон страницы */
+body {
+    font-family: Helvetica, Tahoma, Arial;
+    width: 80em;
+    margin: 0 auto;
+    background: url(img/main_bg.png) no-repeat grey fixed;
+    background-size: cover;
+}
+header {
+    background-color: rgba(0, 0, 255, .3);
+}
+/* Логотип */
+header > img {
+    display: inline-block;
+    width: 10em;
+    float: left;
+}
+/* Название организации */
+header > h1 {
+    display: inline-block;
+    font-size: 7em;
+    float: right;
+}
+/* Меню */
+header > nav {
+    width: 80em;
+}
+/* Пункты меню*/
+header > nav > a {
+    text-decoration: none;
+    font-size: 3em;
+    color: black; 
+}
+/* Посещенные ссылки */
+header > nav > a:visited {
+    color: black;
+}
+/* Контентная область */
+main {
+    background-color: rgba(0, 255, 0, .3);
+}
+main > section:first-child > article {
+    position: relative;
+}
+/* Изображение слайдера */
+main > section:first-child > article > img{
+    width: 80em;
+}
+/* Псевдоэлемент для левой стрелки слайдера */
+main > section:first-child > article::before {
+    content: '<';
+    position: absolute;
+    color: black;
+    background-color: rgba(255, 255, 255, .7);
+    font-size: 5em;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+/* Псевдоэлемент для правой стрелки слайдера */
+main > section:first-child > article::after {
+    content: '>';
+    position: absolute;
+    color: black;
+    background-color: rgba(255, 255, 255, .7);
+    font-size: 5em;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+}
+/* Блок предложений */
+main > section:nth-child(2) {
+    background-color: rgba(255, 255, 0, .3);
+}
+main > section:nth-child(2) > article {
+    display: inline-block;
+    width: 20em;
+}
+/* Подвал сайта */
+footer {
+    background-color: rgba(255, 0, 0, .3);
+}
+/* Меню подвала */
+footer > nav {
+    display: inline-block;
+}
+/* Пункты меню подвала */
+footer > nav > a {
+    text-decoration: none;
+    font-size: 3em;
+    color: black;
+}
+footer > nav > a:visited {
+    color: black;
+}
+/* Логотип подвала */
+footer > img {
+    display: inline-block;
+    width: 10em;
+}
